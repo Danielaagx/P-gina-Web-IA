@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EstudioTech | Accesorios tecnológicos y de estudio</title>
+  <!-- Hoja de estilos principal -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Encabezado y navegación -->
+  <header class="encabezado">
+    <div class="contenedor encabezado__contenido">
+      <a href="#inicio" class="encabezado__logo">Estudio<span>Tech</span></a>
+
+      <button
+        type="button"
+        class="boton-menu"
+        id="botonMenu"
+        aria-label="Abrir o cerrar menú de navegación"
+        aria-expanded="false"
+        aria-controls="menuNavegacion">
+        ☰
+      </button>
+
+      <nav class="navegacion" id="menuNavegacion" aria-label="Navegación principal">
+        <ul class="navegacion__lista">
+          <li><a href="#inicio" class="navegacion__enlace">Inicio</a></li>
+          <li><a href="#catalogo" class="navegacion__enlace">Catálogo</a></li>
+          <li><a href="#beneficios" class="navegacion__enlace">Beneficios</a></li>
+          <li><a href="#pedido" class="navegacion__enlace navegacion__enlace--destacado">Pedir ahora</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Sección principal / Hero -->
+    <section id="inicio" class="hero">
+      <div class="contenedor">
+        <span class="hero__etiqueta">Accesorios para estudio y trabajo</span>
+        <h1 class="hero__titulo">Equipa tu escritorio sin complicaciones</h1>
+        <p class="hero__texto">
+          Soportes, teclados, lámparas y organizadores pensados para estudiar y trabajar cómodo desde casa o la universidad, con precios claros y pedido rápido.
+        </p>
+        <div class="hero__acciones">
+          <a href="#catalogo" class="boton boton--primario">Ver catálogo</a>
+          <a href="#pedido" class="boton boton--secundario">Hacer un pedido</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Catálogo de productos -->
+    <section id="catalogo" class="seccion">
+      <div class="contenedor">
+        <div class="seccion__cabecera">
+          <h2 class="seccion__titulo">Catálogo de productos</h2>
+          <p class="seccion__subtitulo">Elige un accesorio para llevarlo directo al formulario de pedido.</p>
+        </div>
+
+        <div class="cuadricula-productos">
+          <article class="tarjeta">
+            <div class="tarjeta__visual" aria-hidden="true">💻</div>
+            <h3 class="tarjeta__titulo">Soporte ajustable para portátil</h3>
+            <p class="tarjeta__descripcion">Eleva la pantalla a la altura de los ojos y mejora la ventilación en jornadas largas.</p>
+            <p class="tarjeta__precio">$65.000 COP</p>
+            <button type="button" class="boton boton--primario boton--completo boton-elegir" data-producto="soporte">
+              Elegir producto
+            </button>
+          </article>
+
+          <article class="tarjeta">
+            <div class="tarjeta__visual" aria-hidden="true">⌨️</div>
+            <h3 class="tarjeta__titulo">Teclado inalámbrico compacto</h3>
+            <p class="tarjeta__descripcion">Teclas suaves, tamaño reducido para escritorios pequeños y conexión estable.</p>
+            <p class="tarjeta__precio">$95.000 COP</p>
+            <button type="button" class="boton boton--primario boton--completo boton-elegir" data-producto="teclado">
+              Elegir producto
+            </button>
+          </article>
+
+          <article class="tarjeta">
+            <div class="tarjeta__visual" aria-hidden="true">💡</div>
+            <h3 class="tarjeta__titulo">Lámpara LED de escritorio</h3>
+            <p class="tarjeta__descripcion">Luz pareja sin deslumbramientos para leer, programar o tomar apuntes de noche.</p>
+            <p class="tarjeta__precio">$58.000 COP</p>
+            <button type="button" class="boton boton--primario boton--completo boton-elegir" data-producto="lampara">
+              Elegir producto
+            </button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Beneficios y preguntas rápidas -->
+    <section id="beneficios" class="seccion seccion--clara">
+      <div class="contenedor">
+        <div class="seccion__cabecera">
+          <h2 class="seccion__titulo">Por qué pedir aquí</h2>
+          <p class="seccion__subtitulo">Pensado para que resuelvas tu compra rápido y sin vueltas.</p>
+        </div>
+
+        <div class="cuadricula-beneficios">
+          <article class="tarjeta">
+            <h3 class="tarjeta__titulo">Precios transparentes</h3>
+            <p class="tarjeta__descripcion">Ves el valor de cada accesorio desde el inicio, sin cargos ocultos al solicitar.</p>
+          </article>
+
+          <article class="tarjeta">
+            <h3 class="tarjeta__titulo">Ideal para espacios reducidos</h3>
+            <p class="tarjeta__descripcion">Productos compactos y funcionales que encajan bien en mesas de estudio o habitaciones compartidas.</p>
+          </article>
+
+          <article class="tarjeta">
+            <h3 class="tarjeta__titulo">Atención directa</h3>
+            <p class="tarjeta__descripcion">Envías tu solicitud en segundos y confirmas disponibilidad y entrega de forma sencilla.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Formulario de pedido / contacto -->
+    <section id="pedido" class="seccion">
+      <div class="contenedor contenedor--formulario">
+        <div class="seccion__cabecera">
+          <h2 class="seccion__titulo">Solicitud de pedido</h2>
+          <p class="seccion__subtitulo">Completa tus datos y el producto que te interesa.</p>
+        </div>
+
+        <form id="formularioPedido" class="formulario" novalidate>
+          <div class="formulario__grupo">
+            <label for="nombreCliente" class="formulario__etiqueta">Nombre completo *</label>
+            <input type="text" id="nombreCliente" name="nombreCliente" class="formulario__campo" placeholder="Tu nombre y apellido" required>
+            <span class="formulario__error" id="errorNombre" aria-live="polite"></span>
+          </div>
+
+          <div class="formulario__grupo">
+            <label for="correoCliente" class="formulario__etiqueta">Correo electrónico *</label>
+            <input type="email" id="correoCliente" name="correoCliente" class="formulario__campo" placeholder="correo@ejemplo.com" required>
+            <span class="formulario__error" id="errorCorreo" aria-live="polite"></span>
+          </div>
+
+          <div class="formulario__grupo">
+            <label for="productoSeleccionado" class="formulario__etiqueta">Producto *</label>
+            <select id="productoSeleccionado" name="productoSeleccionado" class="formulario__campo" required>
+              <option value="">Selecciona un producto</option>
+              <option value="soporte">Soporte ajustable para portátil ($65.000 COP)</option>
+              <option value="teclado">Teclado inalámbrico compacto ($95.000 COP)</option>
+              <option value="lampara">Lámpara LED de escritorio ($58.000 COP)</option>
+            </select>
+            <span class="formulario__error" id="errorProducto" aria-live="polite"></span>
+          </div>
+
+          <div class="formulario__grupo">
+            <label for="notaPedido" class="formulario__etiqueta">Notas o ciudad de entrega (opcional)</label>
+            <textarea id="notaPedido" name="notaPedido" rows="3" class="formulario__campo" placeholder="Ej. Bucaramanga, preferencia de color o duda rápida"></textarea>
+          </div>
+
+          <button type="submit" class="boton boton--primario boton--completo">Enviar solicitud</button>
+
+          <div id="mensajeExito" class="mensaje-exito" role="status" hidden></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Pie de página -->
+  <footer class="pie-pagina">
+    <div class="contenedor pie-pagina__contenido">
+      <div>
+        <p class="pie-pagina__marca">EstudioTech</p>
+        <p class="pie-pagina__texto">Accesorios prácticos para estudiar y trabajar.</p>
+      </div>
+      <p class="pie-pagina__texto">Contacto: pedidos@estudiotech.com</p>
+    </div>
+  </footer>
+
+  <!-- Script principal -->
+  <script src="app.js"></script>
+</body>
+</html>
